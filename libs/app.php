@@ -1,6 +1,7 @@
 <?php 
     
     require_once 'controllers/errorPage.php';
+    
 
     function IsLoadView($archivoController,$WhatAction,$url = null){
 
