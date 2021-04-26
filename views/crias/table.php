@@ -1,4 +1,4 @@
-<div id="table_data_animales">
+<div id="table_data_cria">
     <div class="container">
         <div class="row" >
             <div class="col s12" >
@@ -13,7 +13,9 @@
                                     <th>Nombre</th>
                                     <th>Especie </th>
                                     <th>Raza</th>
-                                    <th>Fecha Ingreso</th>
+                                    <th>Sexo</th>
+                                    <th>Fecha Nacimiento</th>
+                                    <th>Madre</th>
                                     <th>Cuidador</th>
                                     <th>Acciones</th>
                                 </tr>
@@ -24,10 +26,12 @@
                                                                 
                                 ?>
                                     <tr>
-                                        <td><?php echo $value['ani_nombre'] ?></td>
-                                        <td><?php echo $value['ani_especie'] ?></td>
-                                        <td><?php echo $value['ani_raza'] ?></td>
-                                        <td><?php echo $value['ani_fingreso'] ?></td>
+                                        <td><?php echo $value['cri_nombre'] ?></td>
+                                        <td><?php echo $value['cri_especie'] ?></td>
+                                        <td><?php echo $value['cri_raza'] ?></td>
+                                        <td><?php echo $value['cri_sexo'] ?></td>
+                                        <td><?php echo $value['cri_fnacimiento'] ?></td>
+                                        <td><?php echo $value['cri'] ?></td>
                                         <td><?php echo $value['cui_nombre'] ?></td>
                                         <td>
                                             <button data-target="modalAnimalEdit" class="btn modal-trigger waves-effect amber darken-4" onclick="OneData(<?php echo $value['ani_id'] ?>)"><i class="material-icons">edit</i></button> 
@@ -39,7 +43,7 @@
                         </table>
                     </div>
                     <div class="card-action center">
-                        <button data-target="modalAnimal" class="btn modal-trigger waves-effect blue darken-3"><i class="material-icons left">library_add</i>Agregar animal</button>
+                        <button data-target="modalCria" class="btn modal-trigger waves-effect blue darken-3"><i class="material-icons left">library_add</i>Agregar Cria</button>
                     </div>
                 </div>
             </div>

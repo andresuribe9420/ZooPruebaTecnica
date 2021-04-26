@@ -13,26 +13,26 @@
 
             // $this->ShowConsole($data);
 
-            $sql = 'INSERT INTO tblanimal
+            $sql = 'INSERT INTO tblcria
             (
-                ani_nombre,
-                ani_especie,
-                ani_sexo,
-                ani_fnacimiento,
-                ani_fingreso,
-                ani_color,
-                ani_raza,
+                cri_nombre,
+                cri_especie,
+                cri_raza,
+                cri_sexo,
+                cri_fnacimiento,
+                cri_color,
+                tblanimal_ani_id,
                 tblcuidador_cui_id
                 ) VALUES 
                     (
-                    "'.$data->ani_nombre.'",
-                    "'.$data->ani_especie.'",
-                    "'.$data->ani_sexo.'",
-                    "'.$data->ani_fnacimiento.'",
-                    "'.$data->ani_fingreso.'",
-                    "'.$data->ani_color.'",
-                    "'.$data->ani_raza.'",
-                     '.$data->tblcuidador_cui_id.'
+                    "'.$data->cri_nombre.'",
+                    "'.$data->cri_especie.'",
+                    "'.$data->cri_raza.'",
+                    "'.$data->cri_sexo.'",
+                    "'.$data->cri_fnacimiento.'",
+                    "'.$data->cri_color.'",
+                    '.$data->tblanimal_ani_id.',
+                    '.$data->tblcuidador_cui_id.'
                     
                     )';
 
@@ -50,7 +50,7 @@
         }
         public function getAll(){
             try {
-                $query = $this->prepare('SELECT ani_nombre,ani_especie,ani_fingreso,tblcuidador.cui_nombre,ani_raza,ani_id FROM tblanimal INNER JOIN tblcuidador ON tblcuidador.cui_id = tblanimal.tblcuidador_cui_id ORDER BY ani_id DESC');
+                $query = $this->prepare('SELECT * FROM tblcria ORDER BY cri_id DESC');
                 $query->execute(); 
 
                 return $query->fetchAll();

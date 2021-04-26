@@ -1,9 +1,9 @@
 
-<div id="modalAnimal" class="modal">
+<div id="modalCria" class="modal">
     <div class="modal-content">
-        <h4 class="center">Nuevo Animal</h4>
+        <h4 class="center">Nueva Cria</h4>
         <div id="form_cuidador_div">
-            <form id="form_animal">  
+            <form id="form_cria">  
                     <div class="row">                        
                         <div class="input-field col s4 ">
                             <input type="text" name="nombre" required class="validate">
@@ -32,16 +32,14 @@
                             <label for="fnacimiento">Fecha Nacimiento </label>
                         </div>  
                         <div class="input-field col s4 ">
-                            <input type="date" name="fecha ingreso" required class="validate">
-                            <label for="fingreso">Fecha Ingreso </label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col s1"></div>
-                        <div class="input-field col s5 ">
                             <input type="text" name="color" required class="validate">
                             <label for="especie">Color</label>
                         </div> 
+                       
+                    </div>
+                    <div class="row">
+                        <div class="col s1"></div>
+                        
                         <div class="input-field col s5 ">
                             <select name="Cuidador">
                                 <option value="" disabled selected>Seleccione...</option>
@@ -52,6 +50,17 @@
                                 <?php } ?>
                             </select>
                             <label for="cuidador">Cuidador</label>
+                        </div> 
+                        <div class="input-field col s5 ">
+                            <select name="Cuidador">
+                                <option value="" disabled selected>Seleccione...</option>
+                                <?php
+                                foreach ($this->data->animal as $value) {
+                                ?>
+                                    <option value="<?php echo $value['ani_id']; ?>"><?php echo $value['ani_nombre']; ?></option>
+                                <?php } ?>
+                            </select>
+                            <label for="madre">Madre</label>
                         </div> 
                     </div>                  
                    
