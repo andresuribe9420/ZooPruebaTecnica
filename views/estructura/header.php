@@ -22,7 +22,7 @@
             <div class="col s2"> </div>
             <div class="col s8">
                 <nav>
-                    <div class="nav-wrapper #1565c0 blue darken-3">
+                    <div class="nav-wrapper  #1565c0 blue darken-3">
                         <ul id="nav-mobile" class="right hide-on-med-and-down">
                             <li><a href="">Animales</a></li>
                             <li><a href="">Cuidadores</a></li>

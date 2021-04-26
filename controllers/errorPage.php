@@ -9,6 +9,7 @@
         }
 
         public function index(){
+            $this->view->render('estructura/header');
             $this->view->mensaje = "Error al cargar el componente";
             $this->view->render('error/index');
         }
