@@ -93,7 +93,7 @@
             $this->model->update($idCuidador,$DataProcess);
             $this->RefreshDataTable();   
         }
-        function deleteCuidador(){
+        function deleteAnimal(){
             $id = $_POST['id'];
             $this->model->delete(['id'=> $id]);
             $this->RefreshDataTable();

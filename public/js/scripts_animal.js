@@ -43,12 +43,12 @@ function UpdateData(id){
 function DeleteData(id){
 
     Message_Confirm(()=>{
-        var UsuarioDelete ={
-            "Ctr":"Cuidador",
-            "Acc":"deleteCuidador",
+        var DeleteAnimal ={
+            "Ctr":"Animal",
+            "Acc":"deleteAnimal",
             "id":id,
         }
-        ReadyChangeJquery(UsuarioDelete,"#table_data_cuidador")
+        ReadyChangeJquery(DeleteAnimal,"#table_data_animales")
     })
 }
 

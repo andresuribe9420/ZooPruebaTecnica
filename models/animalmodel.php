@@ -22,8 +22,7 @@
                 ani_fingreso,
                 ani_color,
                 ani_raza,
-                tblcuidador_cui_id,
-                ani_image
+                tblcuidador_cui_id
                 ) VALUES 
                     (
                     "'.$data->ani_nombre.'",
@@ -51,7 +50,7 @@
         }
         public function getAll(){
             try {
-                $query = $this->prepare('SELECT * FROM tblanimal ORDER BY ani_id DESC');
+                $query = $this->prepare('SELECT ani_nombre,ani_especie,ani_fingreso,tblcuidador.cui_nombre,ani_raza,ani_id FROM tblanimal INNER JOIN tblcuidador ON tblcuidador.cui_id = tblanimal.tblcuidador_cui_id ORDER BY ani_id DESC');
                 $query->execute(); 
 
                 return $query->fetchAll();
@@ -73,7 +72,7 @@
 
             try {
 
-                $query = $this->prepare('DELETE FROM tblcuidador WHERE cui_id=:id'); 
+                $query = $this->prepare('DELETE FROM tblanimal WHERE ani_id=:id'); 
                 $query->execute($id); 
 
             } catch (PDOException $e) {
