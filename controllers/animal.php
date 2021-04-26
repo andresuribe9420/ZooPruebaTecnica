@@ -58,39 +58,47 @@
             
         }
         
-        function oneCuidador(){ // envio de datos al formulario EDIT
+        function oneAnimal(){ // envio de datos al formulario EDIT
             
             $id = $_POST['id']; 
             $DataOne = $this->model->getId($id);
+            $cuidador = $this->model->consultaDatos("tblcuidador");
 
+           
             //  $this->ShowConsole($DataOne); 
 
             $Data = (object)[                
-                'cuidador'=>$DataOne
+                'animal'=>$DataOne,
+                'cuidador'=>$cuidador,
+                'genero' => array (
+                    "Hembra",
+                    "Macho"
+                )
             ];
             // $this->ShowConsole($Data); 
             
-            $this->view->render('cuidadores/formedit',$Data);
+            $this->view->render('animales/formedit',$Data);
             
         }             
-        function editDataCuidador(){
+        function editDataAnimal(){
 
-            $idCuidador = $_POST['id'];
-            $Datos = $_POST['formularioCuidadorEdit'];  
+            $idAnimal = $_POST['id'];
+            $Datos = $_POST['formularioAnimalEdit'];  
 
             
             $DataProcess = (object)[
-                'cui_cedula'=> $Datos[0],
-                'cui_nombre'=> $Datos[1],
-                'cui_apellido'=> $Datos[2],
-                'cui_telefono'=> $Datos[3],
-                'cui_correo'=> $Datos[4]
-                ];
-            
-            
+                'ani_nombre'=> $Datos[0],
+                'ani_especie'=> $Datos[1],
+                'ani_sexo'=> $Datos[3],
+                'ani_fnacimiento'=> $Datos[4],
+                'ani_fingreso'=> $Datos[5],
+                'ani_color'=> $Datos[6],
+                'ani_raza'=> $Datos[2],
+                'tblcuidador_cui_id'=> $Datos[7]
+                ];   
 
             /* $this->ShowConsole($Data); */
-            $this->model->update($idCuidador,$DataProcess);
+            $this->model->update($idAnimal,$DataProcess);
             $this->RefreshDataTable();   
         }
         function deleteAnimal(){

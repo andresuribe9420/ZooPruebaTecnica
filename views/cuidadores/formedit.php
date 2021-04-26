@@ -34,7 +34,7 @@
                 </div>
             </div>
 
-    </div>
+        </div>
 
     </form>
     <div class="row">
@@ -54,5 +54,4 @@
 
 
     </div>
-</div>
 </div>

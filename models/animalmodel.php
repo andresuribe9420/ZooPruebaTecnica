@@ -83,7 +83,7 @@
         public function getId($id){
             try {
 
-                $query = $this->prepare('SELECT * FROM tblcuidador WHERE cui_id=:id'); 
+                $query = $this->prepare('SELECT * FROM tblanimal WHERE ani_id=:id'); 
                 $query->execute(['id'=>$id]); 
                 
                 return $query->fetchAll();
@@ -98,19 +98,22 @@
 
             //$this->ShowConsole($data);
 
-            $sql='UPDATE tblcuidador SET
+            $sql='UPDATE tblanimal SET
             
-                cui_cedula=           "'.$data->cui_cedula.'",
-                cui_nombre=           "'.$data->cui_nombre.'",
-                cui_apellido=         "'.$data->cui_apellido.'",
-                cui_telefono=         "'.$data->cui_telefono.'",
-                cui_correo=           "'.$data->cui_correo.'"
+                ani_nombre=           "'.$data->ani_nombre.'",
+                ani_especie=          "'.$data->ani_especie.'",
+                ani_sexo=             "'.$data->ani_sexo.'",
+                ani_fnacimiento=      "'.$data->ani_fnacimiento.'",
+                ani_fingreso=         "'.$data->ani_fingreso.'",
+                ani_color=            "'.$data->ani_color.'",
+                ani_raza=             "'.$data->ani_raza.'",
+                tblcuidador_cui_id=   '.$data->tblcuidador_cui_id.'
                 
 
-                WHERE cui_id=                   "'.$id.'"
+                WHERE ani_id=                   "'.$id.'"
             ';
 
-           
+        //    echo $sql;
 
             try {
                 $query = $this->prepare($sql);

@@ -15,29 +15,29 @@ function SaveData() {
 
 function OneData(id){
 
-    var OneIdCuidador ={
-        "Ctr":"Cuidador",
-        "Acc":"oneCuidador",
+    var OneIdAnimal ={
+        "Ctr":"Animal",
+        "Acc":"oneAnimal",
         "id":id
     }
 
-    ReadyChangeJquery(OneIdCuidador,"#form_edit")		
+    ReadyChangeJquery(OneIdAnimal,"#form_edit")		
 }	
 
 function UpdateData(id){
 
     Validate_Form(()=>{
         Message_Confirm(()=>{
-        var data = new FormData($("#form_cuidador_edit")[0]);
-        var DatosCuidadorEdit ={
-            "Ctr":"Cuidador",
-            "Acc":"editDataCuidador",
+        var data = new FormData($("#form_animal_edit")[0]);
+        var DatosAnimalEdit ={
+            "Ctr":"Animal",
+            "Acc":"editDataAnimal",
             "id":id,
-            "formularioCuidadorEdit":ProcessData(data)
+            "formularioAnimalEdit":ProcessData(data)
         }
-        ReadyChangeJquery(DatosCuidadorEdit,"#table_data_animales")
+        ReadyChangeJquery(DatosAnimalEdit,"#table_data_animales")
     })
-},"#form_cuidador_edit")
+},"#form_animal_edit")
 }
 
 function DeleteData(id){
