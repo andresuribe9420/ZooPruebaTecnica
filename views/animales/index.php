@@ -1,11 +1,11 @@
-<div class="row"></div>
-<div class="container">
-    <div class="row">              
-        <div class="col s12">
-            <div class="card  z-depth-4">
-                <div class="card-title center"> Animales</div>
-                <div class="card-content">llegamos a animales</div>
+<script src="public/js/scripts_animal.js"></script>
+
+<div id="modalAnimalEdit" class="modal">
+    <div class="modal-content">
+            <h4 class="center">Modificar Animal</h4>    
+            <div id="form_edit">
             </div>
-        </div>    
-    
+    </div>            
 </div>
+
+

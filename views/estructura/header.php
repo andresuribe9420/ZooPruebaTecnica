@@ -40,8 +40,11 @@
             <div class="col s8">
                 <nav>
                     <div class="nav-wrapper blue darken-4 z-depth-3">
-                        <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <ul>
                             <li><a href="./">Home</a></li>
+                        </ul>
+                        <ul  class="right ">
+                            
                             <li><a href="animal">Animales</a></li>
                             <li><a href="cuidador">Cuidadores</a></li>
                             <li><a href="cria">Crias</a></li>

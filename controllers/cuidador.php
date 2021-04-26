@@ -57,8 +57,7 @@
             
             $this->view->render('cuidadores/formedit',$Data);
             
-        }
-             
+        }             
         function editDataCuidador(){
 
             $idCuidador = $_POST['id'];
@@ -84,7 +83,6 @@
             $this->model->delete(['id'=> $id]);
             $this->RefreshDataTable();
         }
-
 
     }
 
