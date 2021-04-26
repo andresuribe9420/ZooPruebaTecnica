@@ -61,18 +61,21 @@
             
         }
         
-        function oneAnimal(){ // envio de datos al formulario EDIT
+        function oneCria(){ // envio de datos al formulario EDIT
             
             $id = $_POST['id']; 
             $DataOne = $this->model->getId($id);
-            $cuidador = $this->model->consultaDatos("tblcuidador");
 
-           
+            $R1=$this->model->consultaDatos("tblcuidador");
+            $R2=$this->model->consultaDatos("tblanimal");           
+
+                  
             //  $this->ShowConsole($DataOne); 
 
             $Data = (object)[                
-                'animal'=>$DataOne,
-                'cuidador'=>$cuidador,
+                'cria'=>$DataOne,
+                'cuidador'=>$R1,
+                'madre'=>$R2,
                 'genero' => array (
                     "Hembra",
                     "Macho"
@@ -80,31 +83,31 @@
             ];
             // $this->ShowConsole($Data); 
             
-            $this->view->render('animales/formedit',$Data);
+            $this->view->render('crias/formedit',$Data);
             
         }             
-        function editDataAnimal(){
+        function editDataCria(){
 
-            $idAnimal = $_POST['id'];
-            $Datos = $_POST['formularioAnimalEdit'];  
+            $idCria = $_POST['id'];
+            $Datos = $_POST['formularioCriaEdit'];  
 
             
             $DataProcess = (object)[
-                'ani_nombre'=> $Datos[0],
-                'ani_especie'=> $Datos[1],
-                'ani_sexo'=> $Datos[3],
-                'ani_fnacimiento'=> $Datos[4],
-                'ani_fingreso'=> $Datos[5],
-                'ani_color'=> $Datos[6],
-                'ani_raza'=> $Datos[2],
-                'tblcuidador_cui_id'=> $Datos[7]
-                ];   
+                'cri_nombre'=> $Datos[0],
+                'cri_especie'=> $Datos[1],
+                'cri_raza'=> $Datos[2],
+                'cri_sexo'=> $Datos[3],
+                'cri_fnacimiento'=> $Datos[4],
+                'cri_color'=> $Datos[5],
+                'tblanimal_ani_id'=> $Datos[7],
+                'tblcuidador_cui_id'=> $Datos[6]
+                ]; 
 
             /* $this->ShowConsole($Data); */
-            $this->model->update($idAnimal,$DataProcess);
+            $this->model->update($idCria,$DataProcess);
             $this->RefreshDataTable();   
         }
-        function deleteAnimal(){
+        function deleteCria(){
             $id = $_POST['id'];
             $this->model->delete(['id'=> $id]);
             $this->RefreshDataTable();

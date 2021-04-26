@@ -15,25 +15,25 @@ function SaveData() {
 
 function OneData(id){
 
-var OneIdAnimal ={
-    "Ctr":"Animal",
-    "Acc":"oneAnimal",
+var OneIdCria ={
+    "Ctr":"Cria",
+    "Acc":"oneCria",
     "id":id
 }
 
-ReadyChangeJquery(OneIdAnimal,"#form_edit")		
+ReadyChangeJquery(OneIdCria,"#form_edit")		
 }	
 
 function UpdateData(id){
 
 Validate_Form(()=>{
     Message_Confirm(()=>{
-    var data = new FormData($("#form_animal_edit")[0]);
+    var data = new FormData($("#form_cria_edit")[0]);
     var DatosAnimalEdit ={
-        "Ctr":"Animal",
-        "Acc":"editDataAnimal",
+        "Ctr":"Cria",
+        "Acc":"editDataCria",
         "id":id,
-        "formularioAnimalEdit":ProcessData(data)
+        "formularioCriaEdit":ProcessData(data)
     }
     ReadyChangeJquery(DatosAnimalEdit,"#table_data_cria")
 })
@@ -43,12 +43,12 @@ Validate_Form(()=>{
 function DeleteData(id){
 
 Message_Confirm(()=>{
-    var DeleteAnimal ={
-        "Ctr":"Animal",
-        "Acc":"deleteAnimal",
+    var DeleteCria ={
+        "Ctr":"Cria",
+        "Acc":"deleteCria",
         "id":id,
     }
-    ReadyChangeJquery(DeleteAnimal,"#table_data_cria")
+    ReadyChangeJquery(DeleteCria,"#table_data_cria")
 })
 }
 

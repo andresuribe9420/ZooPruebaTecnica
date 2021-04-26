@@ -72,7 +72,7 @@
 
             try {
 
-                $query = $this->prepare('DELETE FROM tblanimal WHERE ani_id=:id'); 
+                $query = $this->prepare('DELETE FROM tblcria WHERE cri_id=:id'); 
                 $query->execute($id); 
 
             } catch (PDOException $e) {
@@ -83,7 +83,7 @@
         public function getId($id){
             try {
 
-                $query = $this->prepare('SELECT * FROM tblanimal WHERE ani_id=:id'); 
+                $query = $this->prepare('SELECT * FROM tblcria WHERE cri_id=:id'); 
                 $query->execute(['id'=>$id]); 
                 
                 return $query->fetchAll();
@@ -92,28 +92,26 @@
                 $this->showError('getId','cuidador',$e);
             }
         }
-
-        
         public function update($id,$data){
 
             //$this->ShowConsole($data);
 
-            $sql='UPDATE tblanimal SET
+            $sql='UPDATE tblcria SET
             
-                ani_nombre=           "'.$data->ani_nombre.'",
-                ani_especie=          "'.$data->ani_especie.'",
-                ani_sexo=             "'.$data->ani_sexo.'",
-                ani_fnacimiento=      "'.$data->ani_fnacimiento.'",
-                ani_fingreso=         "'.$data->ani_fingreso.'",
-                ani_color=            "'.$data->ani_color.'",
-                ani_raza=             "'.$data->ani_raza.'",
-                tblcuidador_cui_id=   '.$data->tblcuidador_cui_id.'
+                cri_nombre=           "'.$data->cri_nombre.'",
+                cri_especie=          "'.$data->cri_especie.'",
+                cri_raza=             "'.$data->cri_raza.'",
+                cri_sexo=             "'.$data->cri_sexo.'",
+                cri_fnacimiento=      "'.$data->cri_fnacimiento.'",
+                cri_color=            "'.$data->cri_color.'",
+                tblanimal_ani_id=     "'.$data->tblanimal_ani_id.'",
+                tblcuidador_cui_id=    '.$data->tblcuidador_cui_id.'
                 
 
-                WHERE ani_id=                   "'.$id.'"
+                WHERE cri_id=                   "'.$id.'"
             ';
 
-        //    echo $sql;
+            //    echo $sql;
 
             try {
                 $query = $this->prepare($sql);
