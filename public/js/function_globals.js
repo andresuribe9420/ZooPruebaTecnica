@@ -14,7 +14,7 @@ function ReadyChangeJquery(GetData,IdentificatorDiv){
 
 	$.ajax ( {
 		method: "POST",
-		url: "libs/app.php",
+		url: "app.php",
 		data: GetData,
 	} )
 	.done(function(data) {

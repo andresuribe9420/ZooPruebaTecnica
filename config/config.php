@@ -1,8 +1,8 @@
 <?php 
     // define('SERVIDOR','localhost');
     // define('DATABASE','zoologicooktal');
-    // define('PASSWORD','');
-    // define('USER','root');
+    // define('PASSWORD','S4rk0199420*');
+    // define('USER','invitado');
 
     define('SERVIDOR','us-cdbr-east-03.cleardb.com');
     define('DATABASE','heroku_ed79454636ea7ae');
