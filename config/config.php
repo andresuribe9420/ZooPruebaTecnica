@@ -1,6 +1,6 @@
 <?php 
     define('SERVIDOR','localhost');
-    define('DATABASE','sigma');
+    define('DATABASE','zoologicooktal');
     define('PASSWORD','');
     define('USER','root');
 ?>
