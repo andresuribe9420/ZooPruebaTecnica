@@ -9,7 +9,7 @@
 
         function render($nombre, $data = []){
 
-            $this->d = $data;
+            $this->data = $data;
             require 'views/'. $nombre .'.php';
         }
 
