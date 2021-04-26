@@ -14,7 +14,7 @@ function ReadyChangeJquery(GetData,IdentificatorDiv){
 
 	$.ajax ( {
 		method: "POST",
-		url: "../libs/app.php",
+		url: "https://zoologicooktal.herokuapp.com/libs/app.php",
 		data: GetData,
 	} )
 	.done(function(data) {
