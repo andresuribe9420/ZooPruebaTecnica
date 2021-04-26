@@ -23,7 +23,7 @@
                             <tbody>
                                 <?php 
                                     foreach ($this->data as $value) {
-                                                                
+                                                           
                                 ?>
                                     <tr>
                                         <td><?php echo $value['cri_nombre'] ?></td>
@@ -31,7 +31,7 @@
                                         <td><?php echo $value['cri_raza'] ?></td>
                                         <td><?php echo $value['cri_sexo'] ?></td>
                                         <td><?php echo $value['cri_fnacimiento'] ?></td>
-                                        <td><?php echo $value['cri'] ?></td>
+                                        <td><?php echo $value['ani_nombre'] ?></td>
                                         <td><?php echo $value['cui_nombre'] ?></td>
                                         <td>
                                             <button data-target="modalAnimalEdit" class="btn modal-trigger waves-effect amber darken-4" onclick="OneData(<?php echo $value['ani_id'] ?>)"><i class="material-icons">edit</i></button> 
