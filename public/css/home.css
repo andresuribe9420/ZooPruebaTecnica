@@ -1,0 +1,236 @@
+body{
+    background-color: rgb(200,200,200);
+}
+
+#Header{
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+    gap: 40px;
+    align-items: center;
+}
+
+table{
+    border-radius: 10px !important;
+}
+
+.responsive-table{
+    background-color: #e0e0e0;
+}
+.dt-buttons{
+    float: left;
+}
+
+
+
+#NavHeader{
+    
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+#MenuAdminHeader{
+    margin-top: 70px;
+}
+.card-content{   
+    overflow-y: auto;
+    max-height: 55vh;
+}
+.NavLogo{
+    padding: 10px;
+   
+}
+.Modal-Aprobada{
+    width: 90% !important;
+}
+.ImgAprobada{
+    width: 50%;
+}
+#tablaOrdenAprobada{
+    max-height: 55vh;
+    overflow: auto;
+}
+#TablaAgregarAdicionales{
+    max-height: 30vh;
+    overflow: auto;
+}
+#TablaAgregarAdicionales td{
+    padding: 3px;
+}
+
+nav{
+    border-radius: 10px;
+    background-color: #8b0d32;
+}
+
+.buttonsApp{
+    background-color: #8b0d32;
+}
+
+
+/* ESTILOS DE BOTONES MODAL */
+/* ESTILOS DE BOTONES MODAL */
+/* ESTILOS DE BOTONES MODAL */
+
+
+.containercaso{
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+.containercasoorden{
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+.sectioncaso{
+    width: 82%;
+    min-height: 500px;
+    margin:0 auto;
+    margin-top: 20px;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+
+.containercaso .card{
+    width: 250px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.25s;
+    background-color: #ffffff;
+}
+
+.containercasoorden .card{
+    width: 245px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 5px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.25s;
+    background-color: #ffffff;
+}
+.buttoncenter{
+    display: flex;
+    justify-content: center;
+}
+.buttoncitos{
+    padding: 15px;
+    margin: 10px;
+    display: flex;
+}
+
+.buttoncitos button{
+    width: 140px;
+    height: 40px;
+}
+
+
+/* input */
+
+/* label color */
+.input-field label {
+    color: #000;
+   }
+   /* label focus color */
+   .input-field input[type=text]:focus + label {
+    color: #000;
+   }
+
+#salirButton{
+    background-color: #8b0d32;
+    border: none;
+    padding: 0px;   
+    margin-right: 10px;    
+}
+#salirButton:hover{
+    transition: 300ms;
+    background-color: aliceblue;
+}
+
+
+::-webkit-scrollbar-track
+{
+	
+	position: absolute;
+	background-color: #97979700;
+    position: absolute;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #63636300;
+}
+
+::-webkit-scrollbar-thumb
+{
+    background-color:  #8b0d32;
+    height: 4px;
+}
+
+
+
+/* EJEMPLO DE TEXTOS*/
+@font-face { 
+    font-family: NunitoSans-Italic; 
+    src: url('../fonts/NunitoSans-Italic.ttf'); 
+}
+
+@font-face {
+    font-family: Montserrat-BoldItalic;
+    src: url('../fonts/Montserrat-BoldItalic.ttf');
+}
+
+
+@font-face {
+    font-family: Montserrat-MediumItalic;
+    src: url('../fonts/Montserrat-MediumItalic.ttf');
+}
+.titulo_inicio{
+    background: -webkit-linear-gradient(left top, #30006e, #130006);
+    background: linear-gradient(to bottom right, #a30137, #c41700);
+    -webkit-background-clip: text;  
+    -webkit-text-fill-color: transparent;  
+	font-family: Montserrat-BoldItalic;
+}
+
+.textos_inicio{
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-family: NunitoSans-Italic;
+}
+
+/* text-shadow: -4px 3px 0 #34d16e, -14px 7px 0 #0a0e27; */
+.textos_subtitulos{
+    color: rgb(29, 29, 29);
+    font-family: NunitoSans-Italic;
+}
+
+.card {
+    border-radius: 20px;
+}
+
+@media screen and (max-width:1000px){
+    /*.NavNoLogo{
+       
+    }
+*/
+
+}
