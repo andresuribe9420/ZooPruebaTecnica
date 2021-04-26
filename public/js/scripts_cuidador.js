@@ -2,7 +2,7 @@
 
 
 	function SaveData() {
-		Validate_Form(()=>{
+		
 			Message_Confirm(()=>{
 				var data = new FormData($("#form_cuidador")[0]);	
 				var DatosCuidador ={
@@ -12,7 +12,7 @@
 				}
 				ReadyChangeJquery(DatosCuidador,"#table_data_cuidador");
 			})
-		},"#form_cuidador")
+		
 		
 	}
 

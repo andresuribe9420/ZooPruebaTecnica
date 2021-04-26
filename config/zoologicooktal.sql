@@ -1,27 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 5.0.2
--- https://www.phpmyadmin.net/
---
--- Servidor: 127.0.0.1
--- Tiempo de generación: 26-04-2021 a las 18:35:57
--- Versión del servidor: 10.4.11-MariaDB
--- Versión de PHP: 7.4.6
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Base de datos: `zoologicooktal`
---
-
--- --------------------------------------------------------
 
 --
 -- Estructura de tabla para la tabla `tblanimal`
@@ -39,6 +15,11 @@ CREATE TABLE `tblanimal` (
   `tblcuidador_cui_id` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `tblanimal`
+--
+
+
 -- --------------------------------------------------------
 
 --
@@ -47,8 +28,20 @@ CREATE TABLE `tblanimal` (
 
 CREATE TABLE `tblcria` (
   `cri_id` int(10) NOT NULL,
-  `cri_nombre` varchar(35) NOT NULL
+  `cri_nombre` varchar(35) NOT NULL,
+  `cri_raza` varchar(35) NOT NULL,
+  `cri_especie` varchar(35) NOT NULL,
+  `cri_sexo` varchar(10) NOT NULL,
+  `cri_color` varchar(35) NOT NULL,
+  `cri_fnacimiento` date NOT NULL,
+  `tblanimal_ani_id` int(10) NOT NULL,
+  `tblcuidador_cui_id` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `tblcria`
+--
+
 
 -- --------------------------------------------------------
 
@@ -69,21 +62,6 @@ CREATE TABLE `tblcuidador` (
 -- Volcado de datos para la tabla `tblcuidador`
 --
 
-INSERT INTO `tblcuidador` (`cui_id`, `cui_cedula`, `cui_nombre`, `cui_apellido`, `cui_telefono`, `cui_correo`) VALUES
-(2, 3455, 'Carlos Andres', 'Castañeda', 3106540205, 'cauribe56@misena.edu.co'),
-(4, 224045, 'Miguel Angel', 'Castañeda', 3216426016, 'mauribe2026@gmail.com');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `tblsexo`
---
-
-CREATE TABLE `tblsexo` (
-  `sex_id` int(10) NOT NULL,
-  `sex_nombre` varchar(35) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
 --
 -- Índices para tablas volcadas
 --
@@ -99,19 +77,15 @@ ALTER TABLE `tblanimal`
 -- Indices de la tabla `tblcria`
 --
 ALTER TABLE `tblcria`
-  ADD PRIMARY KEY (`cri_id`);
+  ADD PRIMARY KEY (`cri_id`),
+  ADD KEY `tblanimal_ani_id` (`tblanimal_ani_id`),
+  ADD KEY `cuidador` (`tblcuidador_cui_id`);
 
 --
 -- Indices de la tabla `tblcuidador`
 --
 ALTER TABLE `tblcuidador`
   ADD PRIMARY KEY (`cui_id`);
-
---
--- Indices de la tabla `tblsexo`
---
-ALTER TABLE `tblsexo`
-  ADD PRIMARY KEY (`sex_id`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -121,25 +95,19 @@ ALTER TABLE `tblsexo`
 -- AUTO_INCREMENT de la tabla `tblanimal`
 --
 ALTER TABLE `tblanimal`
-  MODIFY `ani_id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `ani_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `tblcria`
 --
 ALTER TABLE `tblcria`
-  MODIFY `cri_id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `cri_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `tblcuidador`
 --
 ALTER TABLE `tblcuidador`
-  MODIFY `cui_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
---
--- AUTO_INCREMENT de la tabla `tblsexo`
---
-ALTER TABLE `tblsexo`
-  MODIFY `sex_id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `cui_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Restricciones para tablas volcadas
@@ -150,6 +118,13 @@ ALTER TABLE `tblsexo`
 --
 ALTER TABLE `tblanimal`
   ADD CONSTRAINT `tblcuidador_cui_id` FOREIGN KEY (`tblcuidador_cui_id`) REFERENCES `tblcuidador` (`cui_id`);
+
+--
+-- Filtros para la tabla `tblcria`
+--
+ALTER TABLE `tblcria`
+  ADD CONSTRAINT `cuidador` FOREIGN KEY (`tblcuidador_cui_id`) REFERENCES `tblcuidador` (`cui_id`),
+  ADD CONSTRAINT `tblanimal_ani_id` FOREIGN KEY (`tblanimal_ani_id`) REFERENCES `tblanimal` (`ani_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
