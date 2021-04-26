@@ -4,7 +4,7 @@
             <div class="col s12" >
                 <div class="card  z-depth-4">
                     <div class="card-title center">
-                        <h4> Animales</h4>
+                        <h4> Crias</h4>
                     </div>
                     <div class="card-content">
                         <table class="responsive-table centered striped" >
@@ -13,8 +13,6 @@
                                     <th>Nombre</th>
                                     <th>Especie </th>
                                     <th>Raza</th>
-                                    <th>Sexo</th>
-                                    <th>Fecha Nacimiento</th>
                                     <th>Fecha Ingreso</th>
                                     <th>Cuidador</th>
                                     <th>Acciones</th>
@@ -29,8 +27,6 @@
                                         <td><?php echo $value['ani_nombre'] ?></td>
                                         <td><?php echo $value['ani_especie'] ?></td>
                                         <td><?php echo $value['ani_raza'] ?></td>
-                                        <td><?php echo $value['ani_sexo'] ?></td>
-                                        <td><?php echo $value['ani_fnacimiento'] ?></td>
                                         <td><?php echo $value['ani_fingreso'] ?></td>
                                         <td><?php echo $value['cui_nombre'] ?></td>
                                         <td>

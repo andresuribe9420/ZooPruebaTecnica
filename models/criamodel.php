@@ -1,6 +1,6 @@
 <?php 
 
-    class animalModel extends Model implements IModel {
+    class criaModel extends Model implements IModel {
 
         public function __construct()
         {
@@ -50,7 +50,7 @@
         }
         public function getAll(){
             try {
-                $query = $this->prepare('SELECT ani_id,ani_nombre,ani_especie,ani_sexo,ani_fnacimiento,ani_fingreso,ani_color,ani_raza,tblcuidador.cui_nombre FROM tblanimal INNER JOIN tblcuidador ON tblcuidador.cui_id = tblanimal.tblcuidador_cui_id ORDER BY ani_id DESC');
+                $query = $this->prepare('SELECT ani_nombre,ani_especie,ani_fingreso,tblcuidador.cui_nombre,ani_raza,ani_id FROM tblanimal INNER JOIN tblcuidador ON tblcuidador.cui_id = tblanimal.tblcuidador_cui_id ORDER BY ani_id DESC');
                 $query->execute(); 
 
                 return $query->fetchAll();
