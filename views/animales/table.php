@@ -14,6 +14,7 @@
                                     <th>Especie </th>
                                     <th>Raza</th>
                                     <th>Sexo</th>
+                                    <th>Color</th>
                                     <th>Fecha Nacimiento</th>
                                     <th>Fecha Ingreso</th>
                                     <th>Cuidador</th>
@@ -30,6 +31,7 @@
                                         <td><?php echo $value['ani_especie'] ?></td>
                                         <td><?php echo $value['ani_raza'] ?></td>
                                         <td><?php echo $value['ani_sexo'] ?></td>
+                                        <td><?php echo $value['ani_color'] ?></td>
                                         <td><?php echo $value['ani_fnacimiento'] ?></td>
                                         <td><?php echo $value['ani_fingreso'] ?></td>
                                         <td><?php echo $value['cui_nombre'] ?></td>

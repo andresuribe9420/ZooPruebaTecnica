@@ -16,6 +16,7 @@
                                     <th>Sexo</th>
                                     <th>Fecha Nacimiento</th>
                                     <th>Madre</th>
+                                    <th>Color</th>
                                     <th>Cuidador</th>
                                     <th>Acciones</th>
                                 </tr>
@@ -32,6 +33,7 @@
                                         <td><?php echo $value['cri_sexo'] ?></td>
                                         <td><?php echo $value['cri_fnacimiento'] ?></td>
                                         <td><?php echo $value['ani_nombre'] ?></td>
+                                        <td><?php echo $value['cri_color'] ?></td>
                                         <td><?php echo $value['cui_nombre'] ?></td>
                                         <td>
                                             <button data-target="modalCriaEdit" class="btn modal-trigger waves-effect amber darken-4" onclick="OneData(<?php echo $value['cri_id'] ?>)"><i class="material-icons">edit</i></button> 

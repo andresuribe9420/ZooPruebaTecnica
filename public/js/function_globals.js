@@ -1,13 +1,15 @@
+
+// PROCESO INFORMACION PARA EL AJAX
 function ProcessData(data){
 	var ArrayNew = []
 	
 	for (var value of data.values()) {
 		ArrayNew.push(value)
 		}
-		//console.log(ArrayNew);
 		return ArrayNew;
 }
 
+// FUNCION GLOBAL AJAX
 function ReadyChangeJquery(GetData,IdentificatorDiv){
 
 	$.ajax ( {
@@ -27,7 +29,7 @@ function ReadyChangeJquery(GetData,IdentificatorDiv){
 
 }
 
-
+// FUNCION VALIDAR INPUTS
 function Validate_Form(x_function_ready,formulario){
 	let count_errors = 0
 
@@ -55,6 +57,7 @@ function Validate_Form(x_function_ready,formulario){
 	
 }
 
+// FUNCION MENSAJES DE CONFIRMACION
 function Message_Confirm(x_function_ready){
 
 	$.confirm({

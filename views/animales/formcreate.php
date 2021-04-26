@@ -6,21 +6,21 @@
             <form id="form_animal">  
                     <div class="row">                        
                         <div class="input-field col s4 ">
-                            <input type="text" name="nombre" required class="validate">
+                            <input type="text" name="nombre" required class="validate" id="nombreanimal">
                             <label for="PrimerNombre">Nombre</label>
                         </div>  
                         <div class="input-field col s4 ">
-                            <input type="text" name="especie" required class="validate">
+                            <input type="text" name="especie" required class="validate" id="especieanimal">
                             <label for="especie">Especie</label>
                         </div>  
                         <div class="input-field col s4 ">
-                            <input type="text" name="raza" required class="validate">
+                            <input type="text" name="raza" required class="validate" id="razaanimal">
                             <label for="raza">Raza</label>
                         </div>                          
                     </div>
                     <div class="row">
                         <div class="input-field col s4 ">
-                            <select name="sexo">
+                            <select name="sexo" id="sexoanimal">
                                 <option value="" disabled selected>Seleccione Sexo</option>
                                 <option value="Hembra">Hembra</option>
                                 <option value="Macho">Macho</option>
@@ -28,22 +28,22 @@
                             <label for="especie">sexo</label>
                         </div> 
                         <div class="input-field col s4 ">
-                            <input type="date" name="fecha nacimiento" required class="validate">
+                            <input type="date" name="fecha nacimiento" required class="validate" id="fnaanimal">
                             <label for="fnacimiento">Fecha Nacimiento </label>
                         </div>  
                         <div class="input-field col s4 ">
-                            <input type="date" name="fecha ingreso" required class="validate">
+                            <input type="date" name="fecha ingreso" required class="validate" id="finanimal">
                             <label for="fingreso">Fecha Ingreso </label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col s1"></div>
                         <div class="input-field col s5 ">
-                            <input type="text" name="color" required class="validate">
+                            <input type="text" name="color" required class="validate" id="coloranimal">
                             <label for="especie">Color</label>
                         </div> 
                         <div class="input-field col s5 ">
-                            <select name="Cuidador">
+                            <select name="Cuidador" id="cuidadoranimal">
                                 <option value="" disabled selected>Seleccione...</option>
                                 <?php
                                 foreach ($this->data->cuidador as $value) {

@@ -50,7 +50,7 @@
         }
         public function getAll(){
             try {
-                $query = $this->prepare('SELECT cri_id,cri_nombre,cri_raza,cri_especie,cri_sexo,cri_fnacimiento, tblanimal.ani_nombre,tblcuidador.cui_nombre FROM tblcria INNER JOIN tblanimal ON tblanimal.ani_id = tblcria.tblanimal_ani_id  LEFT JOIN  tblcuidador ON tblcuidador.cui_id = tblcria.tblcuidador_cui_id  ORDER BY cri_id DESC');
+                $query = $this->prepare('SELECT cri_id,cri_nombre,cri_raza,cri_especie,cri_sexo,cri_fnacimiento,cri_color, tblanimal.ani_nombre,tblcuidador.cui_nombre FROM tblcria INNER JOIN tblanimal ON tblanimal.ani_id = tblcria.tblanimal_ani_id  LEFT JOIN  tblcuidador ON tblcuidador.cui_id = tblcria.tblcuidador_cui_id  ORDER BY cri_id DESC');
                 $query->execute(); 
 
                 return $query->fetchAll();

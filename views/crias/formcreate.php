@@ -69,7 +69,7 @@
             </form>
             <div class="row">
                 <div class="col s2"></div>
-                <div class="col s4">
+                <div class=" col s4">
                     <button type="submit" class="btn waves-effect blue darken-3" onclick="SaveData(); return false;"><i class="material-icons left">save</i>Guardar</button>                   
                         
                 </div>   

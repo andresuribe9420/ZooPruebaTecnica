@@ -1,15 +1,15 @@
 function SaveData() {
     
-    Message_Confirm(()=>{
-        var data = new FormData($("#form_cria")[0]);	
-        var DatosCria ={
-            "Ctr":"Cria",
-            "Acc":"registrarCria",
-            "formularioCria":ProcessData(data)
-        }
-        ReadyChangeJquery(DatosCria,"#table_data_cria");
-    })
-
+        Message_Confirm(()=>{
+            var data = new FormData($("#form_cria")[0]);	
+            var DatosCria ={
+                "Ctr":"Cria",
+                "Acc":"registrarCria",
+                "formularioCria":ProcessData(data)
+            }
+            ReadyChangeJquery(DatosCria,"#table_data_cria");
+        })
+    
 
 }
 
